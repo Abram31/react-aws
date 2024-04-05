@@ -1,10 +1,18 @@
 import styles from "./navigate.module.scss"
+import {Breadcrumbs, Link, Typography} from "@mui/material";
 
 export const Navigate = () => {
     return (
-        <nav className={styles.nav}>
-            <a href='/first'>first - link</a>
-            <a href='/second'>second - link</a>
-        </nav>
+        <Breadcrumbs className={styles.nav}>
+            <Link className={styles.link} href='/first'  underline="hover" color="inherit">
+                First
+            </Link>
+            <Link className={styles.link} href='/second'
+                  underline="hover"
+                  color="inherit"
+            >
+                Second
+            </Link>
+        </Breadcrumbs>
     )
 }

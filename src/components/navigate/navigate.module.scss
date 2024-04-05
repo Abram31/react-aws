@@ -1,4 +1,9 @@
 .nav {
   display: flex;
   justify-content: space-evenly;
+  background-color: #61dafb;
+
+  .link {
+    color: black;
+  }
 }
