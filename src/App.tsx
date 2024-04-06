@@ -9,23 +9,29 @@ import { store} from "./store/store";
 import {ApolloProvider, useQuery} from '@apollo/client';
 import {client} from "./apollo/client";
 import {ALL_POSTS} from "./apollo/posts";
+import {Render} from "./components/render/render";
+import {Block} from "./components/render/block/block";
+import LandingPage from "./templates/landing-page/LandingPage";
 
 
 function App() {
     // store.dispatch(fetchPosts)
     return (
         <Provider store={store}>
-        <BrowserRouter>
+        {/*<BrowserRouter>*/}
             <ApolloProvider client={client} >
+                <LandingPage />
+
             <Navigate/>
-            <Routes>
-                <Route path='/first' element={<First/>}></Route>
-                <Route path='/second' element={<Second/>}></Route>
-                <Route path='*'></Route>
-            </Routes>
+            {/*<Routes>*/}
+            {/*    <Route path='/first' element={<First/>}></Route>*/}
+            {/*    <Route path='/second' element={<Second/>}></Route>*/}
+            {/*    <Route path='/render' element={<Render children={<Block  />}/>}></Route>*/}
+            {/*    <Route path='*'></Route>*/}
+            {/*</Routes>*/}
             </ApolloProvider>
 
-        </BrowserRouter>
+        {/*</BrowserRouter>*/}
         </Provider>
 
     );

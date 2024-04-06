@@ -13,6 +13,12 @@ export const Navigate = () => {
             >
                 Second
             </Link>
+            <Link className={styles.link} href='/render'
+                  underline="hover"
+                  color="inherit"
+            >
+                Render
+            </Link>
         </Breadcrumbs>
     )
 }
